@@ -1,0 +1,7 @@
+# In one terminal
+cd server
+npm run dev
+
+# In another terminal
+cd client
+npm run dev
