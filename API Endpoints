@@ -1,0 +1,16 @@
+GET /api/logs → returns all logs
+
+POST /api/logs → adds a new log entry
+
+---
+
+### 🗃️ PostgreSQL: `schema.sql`
+
+```sql
+CREATE TABLE logs (
+  id SERIAL PRIMARY KEY,
+  date DATE NOT NULL,
+  log_entry TEXT NOT NULL CHECK (char_length(log_entry) <= 1000),
+  user_id TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
