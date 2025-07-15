@@ -1,0 +1,2 @@
+DATABASE_URL=postgresql://your_user:your_pass@localhost:5432/hiking_logs
+PORT=5000
